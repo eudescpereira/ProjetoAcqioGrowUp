@@ -24,7 +24,7 @@ public class CartaoControlador {
         return cartaoRepositorio.findAll();
     }
 
-    @PutMapping
+    @PutMapping("/{cartaoId}")
     public void atualizar (@RequestBody Cartao cartao){
         cartaoRepositorio.save(cartao);
     }

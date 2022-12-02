@@ -24,7 +24,7 @@ public class ClienteControlador {
         return clienteRepositorio.findAll();
     }
 
-    @PutMapping
+    @PutMapping("/{clienteId}")
     public void atualizar (@RequestBody Cliente cliente){
         clienteRepositorio.save(cliente);
     }

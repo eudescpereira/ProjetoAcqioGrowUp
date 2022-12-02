@@ -1,6 +1,7 @@
 package br.com.acqiogrowup.modelo;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -11,6 +12,7 @@ import java.io.Serializable;
 
 @Entity
 @Getter @Setter
+@NoArgsConstructor
 public class Cliente implements Serializable {
 
     @Id
@@ -21,6 +23,7 @@ public class Cliente implements Serializable {
     private String cpf;
     private String telefone;
     private String email;
+    private String senha;
 
     @OneToOne
     @JoinColumn (name="enderecoId")
@@ -31,9 +34,7 @@ public class Cliente implements Serializable {
     @JoinColumn (name="cartaoId")
     private Cartao cartao; */
 
-    /*@OneToMany
+    /* @OneToMany
     @JoinColumn (name="idPedido")
-    private Pedido pedido;
-*/
-
+    private Pedido pedido; */
 }

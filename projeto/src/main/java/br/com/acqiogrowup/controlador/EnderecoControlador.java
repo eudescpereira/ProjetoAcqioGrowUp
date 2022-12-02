@@ -25,7 +25,7 @@ public class EnderecoControlador {
         return enderecoRepositorio.findAll();
     }
 
-    @PutMapping
+    @PutMapping("/{enderecoId}")
     public void atualizar (@RequestBody Endereco endereco){
         enderecoRepositorio.save(endereco);
     }
